@@ -1,5 +1,6 @@
 <script>
-  // You can add any JavaScript logic here if needed
+  import Header from '../components/Header.svelte';
+  import Footer from '../components/Footer.svelte';
 </script>
 
 <style>
@@ -49,14 +50,11 @@
     height: auto;
   }
 
-  footer {
-    margin-top: 2rem;
-    font-size: 0.8rem;
-    color: #bbb;
-  }
+ 
 </style>
-
+  <Header />
 <div class="container">
+
   <h1>Bienvenue à Etscalibur!</h1>
   <p>
   Êtes-vous prêt à libérer la puissance de votre créativité et de vos compétences en ingénierie ? Rejoignez-nous pour concevoir, construire et combattre nos propres robots de combat !
@@ -64,8 +62,5 @@ Que vous soyez novice ou professionnel chevronné, il y a une place pour vous ic
   </p>
   <button class="cta" on:click={() => alert('Get ready to rumble!')}>Rejoins la bataille!</button>
   <img src="https://i.pinimg.com/originals/07/e8/2e/07e82eb13044b7346f479c4c9d3a39cf.png" alt="Fighting Robot" class="robot-image" />
-  
-  <footer>
-    &copy; {new Date().getFullYear()} Etscalibur. Tous droits réservés.
-  </footer>
 </div>
+  <Footer />
