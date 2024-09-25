@@ -31,6 +31,6 @@ You can preview the production build with `npm run preview`.
 > To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
 
 * Normes de programmation à suivre
-- Préférés des noms de variables en francais et des commentaires en francais.
+- Il est préférable des noms de variables et des commentaires en français.
 - Coder sur une branche nommée <votrenom>-dev
 - Créer un pull request sur gitlab pour merge sur main.
