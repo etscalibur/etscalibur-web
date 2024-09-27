@@ -1,6 +1,4 @@
 <script>
-  export let title = "Etscalibur";
-  export let links = ["Home", "About Us", "Teams", "Events", "Contact"];
 </script>
 
 <style>
