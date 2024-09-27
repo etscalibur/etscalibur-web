@@ -5,10 +5,10 @@
 
 <style>
   footer {
-    position: sticky;
+
     bottom: 0;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.6); /* Match header background */
+    width: full;
+    background: rgba(0, 0, 0, 1); /* Match header background */
     backdrop-filter: blur(12px);
     z-index: 1000;
     padding: 1.5rem 2rem;
@@ -18,7 +18,7 @@
   }
 
   footer:hover {
-    background: rgba(0, 0, 0, 0.8); /* Darken on hover */
+    background: rgba(0, 0, 0, 1); /* Darken on hover */
   }
 
   p {
@@ -30,7 +30,7 @@
   }
 
   p span {
-    color: #1db954; /* Greenish highlight for dynamic year */
+    color: #ff4500; /* Greenish highlight for dynamic year */
   }
 
   a {

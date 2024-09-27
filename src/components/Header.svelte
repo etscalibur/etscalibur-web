@@ -1,14 +1,14 @@
 <script>
-  export let title = "Etscalibur Battle Bots Club";
-  export let links = ["Home", "About Us", "Teams", "Events", "Contact"];
+  export let title = "Etscalibur";
+  export let links = ["Acceuil", "À propos", "Mission", "Compétitions", "Équipe"];
 </script>
 
 <style>
   header {
     position: sticky;
     top: 0;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.6); /* Darker, semi-transparent background */
+    width: full;
+    background: rgba(0,0 , 0, 0.7); /* Darker, semi-transparent background */
     backdrop-filter: blur(12px);
     z-index: 1000;
     padding: 1rem 2rem;
@@ -17,6 +17,7 @@
     justify-content: space-between;
     align-items: center;
     transition: background 0.3s ease-in-out;
+    margin-bottom : -100px;
   }
 
   header:hover {
@@ -24,7 +25,7 @@
   }
 
   h1 {
-    color: #fff;
+    color: #ff4500;
     font-size: 1.5rem;
     font-family: 'Poppins', sans-serif; /* Modern, sleek font */
     text-transform: uppercase;
@@ -33,6 +34,7 @@
 
   nav ul {
     display: flex;
+    font-family: 'Poppins', sans-serif; /* Modern, sleek font */
     list-style: none;
     gap: 1.5rem;
     margin: 0;
@@ -40,6 +42,7 @@
   }
 
   nav a {
+    font-family: 'Poppins', sans-serif; /* Modern, sleek font */
     color: #fff;
     font-weight: bold;
     text-decoration: none;
@@ -48,7 +51,7 @@
   }
 
   nav a:hover {
-    color: #1db954; /* Greenish highlight on hover */
+    color: #ff4500; /* Greenish highlight on hover */
   }
 
   nav a::after {
@@ -56,7 +59,7 @@
     display: block;
     width: 0;
     height: 2px;
-    background: #1db954; /* Animated underline effect */
+    background: #ff4500; /* Animated underline effect */
     transition: width 0.3s;
   }
 
