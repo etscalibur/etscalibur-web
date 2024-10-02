@@ -27,7 +27,7 @@
 
 <style>
   header {
-    position: fixed; /* Fixed position to keep it visible when needed */
+    position: sticky;
     top: 0;
     left: 0;
     right : 0;
@@ -41,7 +41,7 @@
     justify-content: space-between;
     align-items: center;
     transition: transform 0.3s ease-in-out; /* Smooth slide-in effect */
-    transform: translateY(-100%); /* Initially hide by moving up */
+    
     
   }
 
@@ -57,7 +57,7 @@
 
   /* Show the header when the `show` class is applied */
   .show {
-    transform: translateY(0);
+   display : block;
   }
 
   header:hover {
@@ -84,7 +84,7 @@
   }
 
   nav a:hover {
-    color: #ff4500; /* Orange highlight on hover */
+    color: var(--primary-color); /* Orange highlight on hover */
   }
 
   nav a::after {
@@ -92,7 +92,7 @@
     display: block;
     width: 0;
     height: 2px;
-    background: #ff4500; /* Animated underline effect */
+    background: var(--primary-color); /* Animated underline effect */
     transition: width 0.3s;
   }
 
@@ -102,8 +102,8 @@
 </style>
 
 <!-- Header -->
-<header class={showHeader ? 'show' : ''}>
- <h1>ETScalibur</h1>
+<header>
+ <h1 class={showHeader ? 'show' : 'display: none'}>ETScalibur</h1>
   <nav>
     <ul>
       {#each links as link}

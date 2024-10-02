@@ -38,5 +38,3 @@
 <Equipe />
 <Competition />
 <Footer />
-<h1 style="font-family: 'Cyberion Demo'; font-weight: normal; font-style: normal;">Cyberion Demo</h1>
-<h1>Hello </h1>
