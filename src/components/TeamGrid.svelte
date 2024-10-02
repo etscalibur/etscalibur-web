@@ -1,6 +1,6 @@
 <script>
-  import TeamCard from './TeamCard.svelte';
-  export let members = [];
+	import TeamCard from './TeamCard.svelte';
+	export let members = [];
 </script>
 
 <div class="grid">

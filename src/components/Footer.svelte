@@ -20,30 +20,30 @@
     transition: background 0.3s ease-in-out;
   }
 
-  footer:hover {
-    background: rgba(0, 0, 0, 1); /* Darken on hover */
-  }
+	footer:hover {
+		background: rgba(0, 0, 0, 1); /* Darken on hover */
+	}
 
-  p {
-    margin: 0;
-    color: #fff;
-    font-size: 1rem;
-    font-family: 'Poppins', sans-serif;
-    letter-spacing: 1px;
-  }
+	p {
+		margin: 0;
+		color: #fff;
+		font-size: 1rem;
+		font-family: 'Poppins', sans-serif;
+		letter-spacing: 1px;
+	}
 
-  p span {
-    color: #ff4500; /* Greenish highlight for dynamic year */
-  }
+	p span {
+		color: #ff4500; /* Greenish highlight for dynamic year */
+	}
 
-  a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.2s ease-in-out;
-  }
+	a {
+		color: #fff;
+		text-decoration: none;
+		font-weight: bold;
+		transition: color 0.2s ease-in-out;
+	}
 
-  a:hover {
-    color: #1db954; /* Greenish highlight on hover */
-  }
+	a:hover {
+		color: #1db954; /* Greenish highlight on hover */
+	}
 </style>
