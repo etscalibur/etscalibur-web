@@ -1,82 +1,12 @@
 <script>
   import TeamCard from './TeamCard.svelte';
-
-  let teamMembers = [
-    {
-      name: 'Félix Lachance',
-      position: 'Président',
-      description: '',
-      imageUrl: '',
-      socialLinks: {
-        github: 'https://github.com/',
-        linkedin: 'https://www.linkedin.com/in/',
-      },
-    },
-    {
-      name: 'Zhi Sheng Trieu',
-      position: 'VP tresorerie & Communication',
-      description: '',
-      imageUrl: 'https://zhisheng.me/wp-content/uploads/2023/04/Photo_Profil.jpg',
-      socialLinks: {
-        github: 'https://github.com/zhishengtrieu',
-        linkedin: 'https://www.linkedin.com/in/zhishengtrieu/',
-      },
-    },
-    {
-      name: 'Alexandre Baudouin Vegas',
-      position: 'VP tresorerie & Chef logiciel',
-      description: '',
-      imageUrl: '',
-      socialLinks: {
-        github: 'https://github.com/',
-        linkedin: 'https://www.linkedin.com/in/',
-      },
-    },
-    {
-      name: 'Julien Giguère',
-      position: 'Secrétaire',
-      description: '',
-      imageUrl: '',
-      socialLinks: {
-        github: 'https://github.com/',
-      },
-    },
-    {
-      name: 'Juan hihi',
-      position: 'Chef innovation',
-      description: '',
-      imageUrl: '',
-      socialLinks: {
-        github: '  ',
-        linkedin: 'https://www.linkedin.com/in/',
-      },
-    },
-    {
-      name: 'Victor Feliciello',
-      position: 'VP compétitions & Chef mécanique',
-      description: '',
-      imageUrl: '',
-      socialLinks: {
-        github: '  ',
-        linkedin: 'https://www.linkedin.com/in/',
-      },
-    },
-    {
-      name: 'Charles-Antoine Cusson',
-      position: 'Chef électrique',
-      description: '',
-      imageUrl: '',
-      socialLinks: {
-        github: '  ',
-        linkedin: 'https://www.linkedin.com/in/',
-      },
-    },
-  ];
-
+  export let members = [];
 </script>
 
 <style>
   .grid {
+    padding-left: 10rem;
+    padding-right: 10rem;
     display: grid;
     grid-template-columns: 1fr;
     gap: 16px;
@@ -96,7 +26,7 @@
 </style>
 
 <div class="grid">
-  {#each teamMembers as member}
+  {#each members as member}
     <TeamCard
       name={member.name}
       position={member.position}
