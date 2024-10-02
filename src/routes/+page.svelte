@@ -6,7 +6,6 @@
   import Mission from '../components/Mission.svelte';
   import Equipe from '../components/Equipe.svelte';
   import Competition from '../components/Competition.svelte';
-
 </script>
 <style>
 
