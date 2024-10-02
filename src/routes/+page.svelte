@@ -6,10 +6,32 @@
   import Mission from '../components/Mission.svelte';
   import Equipe from '../components/Equipe.svelte';
   import Competition from '../components/Competition.svelte';
-  
-</script>
 
-<Header/>
+</script>
+<style>
+
+  @font-face {
+    font-family: 'Cyberion';
+    src: url('../lib/assets/CyberionDemo.woff2') format('woff2'),
+        url('../lib/assets/CyberionDemo.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+  :global(:root){
+  --primary-color:  #E40032;
+  --bg-color: #FAFAFA;
+  --text-primary: black;
+  --text-highlight: #E40032;
+  --button-p : #343434;
+  --button-p-hover : #E40032;
+  --button-p-text : white ;
+
+  }
+
+</style>
+
+<Header />
 <Banner />
 <Apropos />
 <Mission />
