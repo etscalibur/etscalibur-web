@@ -1,18 +1,47 @@
 <script>
+  // You can include any additional script logic here if needed
 </script>
 
 <style>
-  .container{
+  .container {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30vh;
+    background-color:  var(--primary-color);; /* Background color */
+ 
+  }
 
-    text-align : center;
-    font-family: 'Poppins', sans-serif;
-    background-image: url("https://justcuzrobotics.com/cdn/shop/files/Division_V_Meili_sparks_cb17e7d8-0e72-4784-9a42-ef1768d9a0e8.jpg?v=1684256950&width=3840");
-    height : 60vh;
-    background-position :center;
-    background-size : cover;
+  .mask {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+   
+    background-size: cover; /* Ensure the image covers the container */
+    background-position: center; /* Center the image */
+  }
+
+  .mask-text {
+    position: absolute;
+    font-family: 'Cyberion', sans-serif; /* Use the same font as the container */
+    
+    font-size: 9rem; /* Same size as defined */
+    color: transparent; /* Make the text transparent for masking */
+    -webkit-background-clip: text; /* Clip the background to the text */
+    background-image: url('https://i.redd.it/eh5sgcfd8ii81.gif'); /* Use the same image as background */
+    background-size: cover; /* Ensure it covers the text */
+    background-position: center; /* Center the image */
   }
 </style>
 
+<!-- Container for the banner -->
 <div class="container">
-
+  <div class="mask">
+    <div class="mask-text">Etscalibur</div> 
+  </div>
 </div>

@@ -7,15 +7,18 @@
     align-items: center;
     justify-content: center;    
     padding : 30px;
-    background-color: #121212;
-    color: #ffffff;
+    background-color: var(--bg-color);
+    color: var(--text-primary);
     text-align: center;
   }
-
   h1 {
+    font-family: 'Cyberion';
+    font-weight: normal;
+    font-style: normal;
+
     font-size: 3rem;
     margin-bottom: 0.5rem;
-    color: #ff4500; /* Bright color for the title */
+    color: var(--primary-color); /* Bright color for the title */
   }
 
   p {
@@ -23,11 +26,12 @@
     max-width: 600px;
     margin: 1rem 0;
     line-height: 1.5;
+    
   }
 
   .cta {
-    background-color: #ff4500;
-    color: white;
+    background-color: var(--button-p);
+    color: var(--button-p-text);
     padding: 0.8rem 2rem;
     border: none;
     border-radius: 5px;
@@ -37,7 +41,7 @@
   }
 
   .cta:hover {
-    background-color: #ff6347; /* Lighter shade on hover */
+    background-color: var(--button-p-hover); /* Lighter shade on hover */
   }
 
   .robot-image {
@@ -50,7 +54,7 @@
 </style>
 <div class="container">
 
-  <h1>Bienvenue à Etscalibur!</h1>
+  <h1>Bienvenue !</h1>
   <p>
   Êtes-vous prêt à libérer la puissance de votre créativité et de vos compétences en ingénierie ? Rejoignez-nous pour concevoir, construire et combattre nos propres robots de combat !
 Que vous soyez novice ou professionnel chevronné, il y a une place pour vous ici. Commençons ensemble le chemin vers la victoire !

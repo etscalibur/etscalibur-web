@@ -1,35 +1,67 @@
 <script>
+  import { onMount, onDestroy } from 'svelte';
+
   export let title = "Etscalibur";
   export let links = ["Acceuil", "À propos", "Mission", "Compétitions", "Équipe"];
+
+  // State to determine if the header should be visible
+  let showHeader = false;
+
+  // Function to handle scroll events
+  const handleScroll = () => {
+    // Show the header when scrolled past the banner (let's say 80% of banner height)
+    showHeader = window.scrollY > window.innerHeight * 0.3;
+  };
+
+  // Use `onMount` to ensure window access is in the browser
+  onMount(() => {
+    // Attach the scroll event listener
+    window.addEventListener('scroll', handleScroll);
+
+    // Clean up on component unmount
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  });
 </script>
 
 <style>
   header {
-    position: sticky;
+    position: fixed; /* Fixed position to keep it visible when needed */
     top: 0;
+    left: 0;
+    right : 0;
     width: full;
-    background: rgba(0,0 , 0, 0.7); /* Darker, semi-transparent background */
+    background: rgba(0, 0, 0, 0.7); /* Darker, semi-transparent background */
     backdrop-filter: blur(12px);
     z-index: 1000;
-    padding: 1rem 2rem;
+    padding : 1rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    transition: background 0.3s ease-in-out;
-    margin-bottom : -100px;
+    transition: transform 0.3s ease-in-out; /* Smooth slide-in effect */
+    transform: translateY(-100%); /* Initially hide by moving up */
+    
+  }
+
+    h1 {
+    font-family: 'Cyberion';
+    font-weight: normal;
+    font-style: normal;
+
+    font-size: 3rem;
+    margin: 0.5rem;
+    color: var(--primary-color); /* Bright color for the title */
+  }
+
+  /* Show the header when the `show` class is applied */
+  .show {
+    transform: translateY(0);
   }
 
   header:hover {
     background: rgba(0, 0, 0, 0.8); /* Darker background on hover */
-  }
-
-  h1 {
-    color: #ff4500;
-    font-size: 1.5rem;
-    font-family: 'Poppins', sans-serif; /* Modern, sleek font */
-    text-transform: uppercase;
-    letter-spacing: 2px;
   }
 
   nav ul {
@@ -43,6 +75,7 @@
 
   nav a {
     font-family: 'Poppins', sans-serif; /* Modern, sleek font */
+    
     color: #fff;
     font-weight: bold;
     text-decoration: none;
@@ -51,7 +84,7 @@
   }
 
   nav a:hover {
-    color: #ff4500; /* Greenish highlight on hover */
+    color: #ff4500; /* Orange highlight on hover */
   }
 
   nav a::after {
@@ -68,8 +101,9 @@
   }
 </style>
 
-<header>
-  <h1>{title}</h1>
+<!-- Header -->
+<header class={showHeader ? 'show' : ''}>
+ <h1>ETScalibur</h1>
   <nav>
     <ul>
       {#each links as link}
