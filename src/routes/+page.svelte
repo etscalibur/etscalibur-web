@@ -12,19 +12,20 @@
   @font-face {
     font-family: 'Cyberion';
     src: url('../lib/assets/CyberionDemo.woff2') format('woff2'),
-        url('../lib/assets/CyberionDemo.woff') format('woff');
+         url('../lib/assets/CyberionDemo.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
-}
+  }
   :global(:root){
-  --primary-color:  #E40032;
-  --bg-color: #FAFAFA;
-  --text-primary: black;
-  --text-highlight: #E40032;
-  --button-p : #343434;
-  --button-p-hover : #E40032;
-  --button-p-text : white ;
+    --primary-color:  #E40032;
+    --secondary-color: #F0f0f0;
+    --bg-color: #FAFAFA;
+    --text-primary: black;
+    --text-highlight: #E40032;
+    --button-p : #343434;
+    --button-p-hover : #E40032;
+    --button-p-text : white ;
 
   }
 

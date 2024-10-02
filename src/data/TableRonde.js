@@ -23,10 +23,10 @@ export const TableRonde = [
     name: 'Alexandre Baudouin Vegas',
     position: 'VP tresorerie & Chef logiciel',
     description: '',
-    imageUrl: 'https://cdn.vectorstock.com/i/500p/08/19/gray-photo-placeholder-icon-design-ui-vector-35850819.jpg',
+    imageUrl: '/alex-photo.jpg',
     socialLinks: {
-      github: 'https://github.com/',
-      linkedin: 'https://www.linkedin.com/in/',
+      github: 'https://github.com/alexvegas22',
+      linkedin: 'https://www.linkedin.com/in/alexandre-baudouin-vegas',
     },
   },
   {

@@ -9,8 +9,8 @@
 
 <style>
   .card {
-    background-color: #2d3748;
-    color: white;
+    background-color: var(--secondary-color);
+    color: var(--text-primary);
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     display: flex;
@@ -38,7 +38,7 @@
 
   .position {
     font-size: 0.875rem;
-    color: #a0aec0;
+    color: var(--text-primary);
   }
 
   .description {
