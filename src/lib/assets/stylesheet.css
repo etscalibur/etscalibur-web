@@ -1,9 +1,9 @@
 @font-face {
-    font-family: 'Cyberion Demo';
-    src: url('CyberionDemo.woff2') format('woff2'),
-        url('CyberionDemo.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
+	font-family: 'Cyberion Demo';
+	src:
+		url('CyberionDemo.woff2') format('woff2'),
+		url('CyberionDemo.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
 }
-
