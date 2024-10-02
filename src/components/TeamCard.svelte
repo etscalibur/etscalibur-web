@@ -7,6 +7,31 @@
   import Icon from '@iconify/svelte';
 </script>
 
+<div class="card">
+  <img src={imageUrl} alt={name} class="image" />
+  <div class="details">
+    <div>
+      <h3 class="name">{name}</h3>
+      <p class="position">{position}</p>
+      <p class="description">{description}</p>
+    </div>
+    <div class="social-links">
+      {#if socialLinks.github}
+        <a href={socialLinks.github} target="_blank">
+          <Icon icon="mdi:github" width="24">
+            <a href={socialLinks.github} target="_blank"> </a></Icon
+          >
+        </a>
+      {/if}
+      {#if socialLinks.linkedin}
+        <a href={socialLinks.linkedin} target="_blank">
+          <Icon icon="mdi:linkedin" width="24" />
+        </a>
+      {/if}
+    </div>
+  </div>
+</div>
+
 <style>
   .card {
     background-color: var(--secondary-color);
@@ -47,33 +72,7 @@
 
   .social-links a {
     margin-right: 8px;
-    color: inherit; 
+    color: inherit;
     text-decoration: none;
   }
-
 </style>
-
-<div class="card">
-  <img src={imageUrl} alt={name} class="image" />
-  <div class="details">
-    <div>
-      <h3 class="name">{name}</h3>
-      <p class="position">{position}</p>
-      <p class="description">{description}</p>
-    </div>
-    <div class="social-links">
-      {#if socialLinks.github}
-        <a href={socialLinks.github} target="_blank">
-          <Icon icon="mdi:github" width="24">
-            <a href={socialLinks.github} target="_blank">
-          </Icon>
-        </a>
-      {/if}
-      {#if socialLinks.linkedin}
-        <a href={socialLinks.linkedin} target="_blank">
-           <Icon icon="mdi:linkedin" width="24" />
-        </a>
-      {/if}
-    </div>
-  </div>
-</div>

@@ -1,8 +1,8 @@
 <script>
   import { onMount, onDestroy } from 'svelte';
 
-  export let title = "Etscalibur";
-  export let links = ["Acceuil", "À propos", "Mission", "Compétitions", "Équipe"];
+  export let title = 'Etscalibur';
+  export let links = ['Acceuil', 'À propos', 'Mission', 'Compétitions', 'Équipe'];
 
   // State to determine if the header should be visible
   let showHeader = false;
@@ -25,27 +25,37 @@
   });
 </script>
 
+<!-- Header -->
+<header>
+  <h1 class={showHeader ? 'show' : 'display: none'}>ETScalibur</h1>
+  <nav>
+    <ul>
+      {#each links as link}
+        <li><a href="#">{link}</a></li>
+      {/each}
+    </ul>
+  </nav>
+</header>
+
 <style>
   header {
     position: fixed;
     top: 0;
     left: 0;
-    right : 0;
+    right: 0;
     width: full;
     background: rgba(0, 0, 0, 0.7); /* Darker, semi-transparent background */
     backdrop-filter: blur(12px);
     z-index: 1000;
-    padding : 1rem;
+    padding: 1rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     display: flex;
     justify-content: space-between;
     align-items: center;
     transition: transform 0.3s ease-in-out; /* Smooth slide-in effect */
-    
-    
   }
 
-    h1 {
+  h1 {
     font-family: 'Cyberion';
     font-weight: normal;
     font-style: normal;
@@ -57,7 +67,7 @@
 
   /* Show the header when the `show` class is applied */
   .show {
-   display : block;
+    display: block;
   }
 
   header:hover {
@@ -75,7 +85,7 @@
 
   nav a {
     font-family: 'Poppins', sans-serif; /* Modern, sleek font */
-    
+
     color: #fff;
     font-weight: bold;
     text-decoration: none;
@@ -88,7 +98,7 @@
   }
 
   nav a::after {
-    content: "";
+    content: '';
     display: block;
     width: 0;
     height: 2px;
@@ -100,15 +110,3 @@
     width: 100%;
   }
 </style>
-
-<!-- Header -->
-<header>
- <h1 class={showHeader ? 'show' : 'display: none'}>ETScalibur</h1>
-  <nav>
-    <ul>
-      {#each links as link}
-        <li><a href="#">{link}</a></li>
-      {/each}
-    </ul>
-  </nav>
-</header>

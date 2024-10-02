@@ -5,17 +5,24 @@
   import { LaCours } from '../data/LaCours.js';
 </script>
 
+<div>
+  <h1>Notre equipe</h1>
+  <h2>La table ronde</h2>
+  <TeamGrid class="membres" members={TableRonde} />
+  <h2>La cours</h2>
+  <TeamGrid members={LaCours} />
+</div>
+
 <style>
-  
-  *{
-    font-family: 'Poppins', sans-serif;}
+  * {
+    font-family: 'Poppins', sans-serif;
+  }
   h1 {
     text-align: center;
     font-family: 'Cyberion';
     font-weight: normal;
     font-style: normal;
-    color : var(--text-highlight);
-
+    color: var(--text-highlight);
   }
 
   h2 {
@@ -26,14 +33,6 @@
     text-align: center;
   }
   membres {
-    font-family:"Poppins";
+    font-family: 'Poppins';
   }
 </style>
-
-<div>
-  <h1>Notre equipe</h1> 
-  <h2>La table ronde</h2> 
-  <TeamGrid class="membres" members={TableRonde} />
-  <h2>La cours</h2>
-  <TeamGrid members={LaCours} />
-</div>

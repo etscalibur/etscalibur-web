@@ -2,6 +2,28 @@
   // Optional: Add any JS if necessary
 </script>
 
+<div class="container">
+  <h1>Bienvenue !</h1>
+  <p>
+    Êtes-vous prêt à libérer la puissance de votre créativité et de vos compétences en ingénierie ?
+    Rejoignez-nous pour concevoir, construire et combattre nos propres robots de combat ! Que vous
+    soyez novice ou professionnel chevronné, il y a une place pour vous ici. Commençons ensemble le
+    chemin vers la victoire !
+  </p>
+
+  <div>
+    <button class="cta" on:click={() => alert('Get ready to rumble!')}>Rejoins la bataille!</button>
+    <img class="gear" src="./gear.svg" alt="Top-left gear" />
+    <img class="gears" src="./gears.svg" alt="Bottom-right gears" />
+  </div>
+
+  <img
+    src="https://i.pinimg.com/originals/07/e8/2e/07e82eb13044b7346f479c4c9d3a39cf.png"
+    alt="Fighting Robot"
+    class="robot-image"
+  />
+</div>
+
 <style>
   * {
     font-family: 'Poppins', sans-serif;
@@ -53,11 +75,14 @@
   }
 
   /* Position and hide the SVGs initially */
-  .gear, .gears {
+  .gear,
+  .gears {
     position: absolute;
     width: 80px; /* Adjust size as needed */
     height: auto;
-    transition: transform 0.5s, opacity 0.5s; /* Smooth transition for animations */
+    transition:
+      transform 0.5s,
+      opacity 0.5s; /* Smooth transition for animations */
     opacity: 0; /* Hide initially */
   }
 
@@ -90,18 +115,3 @@
     height: auto;
   }
 </style>
-
-<div class="container">
-  <h1>Bienvenue !</h1>
-  <p>
-    Êtes-vous prêt à libérer la puissance de votre créativité et de vos compétences en ingénierie ? Rejoignez-nous pour concevoir, construire et combattre nos propres robots de combat ! Que vous soyez novice ou professionnel chevronné, il y a une place pour vous ici. Commençons ensemble le chemin vers la victoire !
-  </p>
-
-  <div>
-    <button class="cta" on:click={() => alert('Get ready to rumble!')}>Rejoins la bataille!</button>
-    <img class="gear" src="./gear.svg" alt="Top-left gear" />
-    <img class="gears" src="./gears.svg" alt="Bottom-right gears" />
-  </div>
-
-  <img src="https://i.pinimg.com/originals/07/e8/2e/07e82eb13044b7346f479c4c9d3a39cf.png" alt="Fighting Robot" class="robot-image" />
-</div>
