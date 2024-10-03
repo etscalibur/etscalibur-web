@@ -1,6 +1,6 @@
 <script>
-	// Optional: Add any JS if necessary
-	// Optional: Add any JS if necessary
+  // Optional: Add any JS if necessary
+  // Optional: Add any JS if necessary
 </script>
 
 <div class="container">
@@ -26,55 +26,55 @@
 </div>
 
 <style>
-	* {
-		font-family: 'Poppins', sans-serif;
-	}
+  * {
+    font-family: 'Poppins', sans-serif;
+  }
 
-	.container {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		padding: 30px;
-		background-color: var(--bg-color);
-		color: var(--text-primary);
-		text-align: center;
-		position: relative; /* Needed for absolutely positioning the images */
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    text-align: center;
+    position: relative; /* Needed for absolutely positioning the images */
     overflow: hidden;
-	}
+  }
 
-	h1 {
-		font-family: 'Cyberion';
-		font-weight: normal;
-		font-style: normal;
-		font-size: 3rem;
-		margin-bottom: 0.5rem;
-		color: var(--primary-color);
-	}
+  h1 {
+    font-family: 'Cyberion';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+  }
 
-	p {
-		font-size: 1.2rem;
-		max-width: 600px;
-		margin: 1rem 0;
-		line-height: 1.5;
-	}
+  p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 1rem 0;
+    line-height: 1.5;
+  }
 
-	.cta {
-		background-color: var(--button-p);
-		color: var(--button-p-text);
-		padding: 0.8rem 2rem;
-		border: none;
-		border-radius: 5px;
-		font-size: 1.2rem;
-		cursor: pointer;
-		transition: background-color 0.3s;
-		position: relative; /* To make hover animations apply to these buttons */
-		z-index: 2;
-	}
+  .cta {
+    background-color: var(--button-p);
+    color: var(--button-p-text);
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    position: relative; /* To make hover animations apply to these buttons */
+    z-index: 2;
+  }
 
-	.cta:hover {
-		background-color: var(--button-p-hover);
-	}
+  .cta:hover {
+    background-color: var(--button-p-hover);
+  }
 
   /* Position and hide the SVGs initially */
   .gear,
@@ -88,31 +88,31 @@
     opacity: 0; /* Hide initially */
   }
 
-	.gear {
-		top: -40px; /* Hidden above */
-		left: -40px; /* Hidden to the left */
-		transform: rotate(0deg);
-	}
+  .gear {
+    top: -40px; /* Hidden above */
+    left: -40px; /* Hidden to the left */
+    transform: rotate(0deg);
+  }
 
-	.gears {
-		bottom: -40px; /* Hidden below */
-		right: -40px; /* Hidden to the right */
-		transform: translate(0, 0);
-	}
+  .gears {
+    bottom: -40px; /* Hidden below */
+    right: -40px; /* Hidden to the right */
+    transform: translate(0, 0);
+  }
 
-	/* Show and animate SVGs on button hover */
-	.cta:hover + .gear {
-		opacity: 1;
-		transform: translate(40px, 40px) rotate(360deg); /* Make it visible and spin */
-	}
-	.cta:hover + .gear + .gears {
-		opacity: 1;
-		transform: translate(-40px, -40px); /* Make it visible and move into view */
-	}
+  /* Show and animate SVGs on button hover */
+  .cta:hover + .gear {
+    opacity: 1;
+    transform: translate(40px, 40px) rotate(360deg); /* Make it visible and spin */
+  }
+  .cta:hover + .gear + .gears {
+    opacity: 1;
+    transform: translate(-40px, -40px); /* Make it visible and move into view */
+  }
 
-	.robot-image {
-		margin-top: 2rem;
-		width: 300px;
-		height: auto;
-	}
+  .robot-image {
+    margin-top: 2rem;
+    width: 300px;
+    height: auto;
+  }
 </style>

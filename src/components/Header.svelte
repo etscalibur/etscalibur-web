@@ -1,38 +1,45 @@
 <script>
-	import { onMount, onDestroy } from 'svelte';
+  import { onMount } from 'svelte';
 
-  export let title = 'Etscalibur';
-  export let links = ['Acceuil', 'À propos', 'Mission', 'Compétitions', 'Équipe'];
+  export let title = 'ETScalibur';
+  export let links = [
+    'Acceuil',
+    'À propos',
+    'Mission',
+    'Compétitions',
+    'Équipe',
+    'Partenaires',
+    'Contact'
+  ];
 
-	// State to determine if the header should be visible
-	let showHeader = false;
+  // State to determine if the header should be visible
+  let showHeader = false;
 
-	// Function to handle scroll events
-	const handleScroll = () => {
-		// Show the header when scrolled past the banner (let's say 80% of banner height)
-		showHeader = window.scrollY > window.innerHeight * 0.3;
-	};
-	
-	// Use `onMount` to ensure window access is in the browser
-	onMount(() => {
-		// Attach the scroll event listener
-		window.addEventListener('scroll', handleScroll);
-	
+  // Function to handle scroll events
+  const handleScroll = () => {
+    // Show the header when scrolled past the banner (let's say 80% of banner height)
+    showHeader = window.scrollY > window.innerHeight * 0.3;
+  };
 
-		// Clean up on component unmount
-		return () => {
-			window.removeEventListener('scroll', handleScroll);
-		};
-	});
+  // Use `onMount` to ensure window access is in the browser
+  onMount(() => {
+    // Attach the scroll event listener
+    window.addEventListener('scroll', handleScroll);
+
+    // Clean up on component unmount
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  });
 </script>
 
 <!-- Header -->
 <header>
-  <h1 class={showHeader ? 'show' : 'display: none'}>ETScalibur</h1>
+  <h1 class={showHeader ? 'show' : 'display: none'}>{title}</h1>
   <nav>
     <ul>
       {#each links as link}
-        <li><a href="#">{link}</a></li>
+        <li><a href={link}>{link}</a></li>
       {/each}
     </ul>
   </nav>
@@ -61,28 +68,28 @@
     font-weight: normal;
     font-style: normal;
 
-		font-size: 3rem;
-		margin: 0.5rem;
-		color: var(--primary-color); /* Bright color for the title */
-	}
+    font-size: 3rem;
+    margin: 0.5rem;
+    color: var(--primary-color); /* Bright color for the title */
+  }
 
   /* Show the header when the `show` class is applied */
   .show {
     display: block;
   }
 
-	header:hover {
-		background: rgba(0, 0, 0, 0.8); /* Darker background on hover */
-	}
+  header:hover {
+    background: rgba(0, 0, 0, 0.8); /* Darker background on hover */
+  }
 
-	nav ul {
-		display: flex;
-		font-family: 'Poppins', sans-serif; /* Modern, sleek font */
-		list-style: none;
-		gap: 1.5rem;
-		margin: 0;
-		padding: 0;
-	}
+  nav ul {
+    display: flex;
+    font-family: 'Poppins', sans-serif; /* Modern, sleek font */
+    list-style: none;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+  }
 
   nav a {
     font-family: 'Poppins', sans-serif; /* Modern, sleek font */
@@ -94,9 +101,9 @@
     transition: color 0.2s ease-in-out;
   }
 
-	nav a:hover {
-		color: var(--primary-color); /* Orange highlight on hover */
-	}
+  nav a:hover {
+    color: var(--primary-color); /* Orange highlight on hover */
+  }
 
   nav a::after {
     content: '';
@@ -107,7 +114,7 @@
     transition: width 0.3s;
   }
 
-	nav a:hover::after {
-		width: 100%;
-	}
+  nav a:hover::after {
+    width: 100%;
+  }
 </style>

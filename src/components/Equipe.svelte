@@ -1,8 +1,7 @@
 <script>
-	import TeamCard from '../components/TeamCard.svelte';
-	import TeamGrid from '../components/TeamGrid.svelte';
-	import { TableRonde } from '../data/TableRonde.js';
-	import { LaCours } from '../data/LaCours.js';
+  import TeamGrid from '../components/TeamGrid.svelte';
+  import { TableRonde } from '../data/TableRonde.js';
+  import { LaCours } from '../data/LaCours.js';
 </script>
 
 <div>
@@ -31,8 +30,5 @@
     font-style: normal;
 
     text-align: center;
-  }
-  membres {
-    font-family: 'Poppins';
   }
 </style>
