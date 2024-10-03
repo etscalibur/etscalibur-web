@@ -4,7 +4,9 @@
 </script>
 
 <footer>
-  <p>{text} - <span>{year}</span></p>
+  <p>
+    {text} - <span>{year}</span> - <a href="https://github.com/etscalibur/etscalibur-web">Github</a>
+  </p>
 </footer>
 
 <style>
