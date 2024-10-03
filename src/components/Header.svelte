@@ -1,40 +1,24 @@
 <script>
 	import { onMount, onDestroy } from 'svelte';
-	import { onMount, onDestroy } from 'svelte';
 
   export let title = 'Etscalibur';
   export let links = ['Acceuil', 'À propos', 'Mission', 'Compétitions', 'Équipe'];
 
 	// State to determine if the header should be visible
 	let showHeader = false;
-	// State to determine if the header should be visible
-	let showHeader = false;
 
 	// Function to handle scroll events
 	const handleScroll = () => {
 		// Show the header when scrolled past the banner (let's say 80% of banner height)
 		showHeader = window.scrollY > window.innerHeight * 0.3;
 	};
-	// Function to handle scroll events
-	const handleScroll = () => {
-		// Show the header when scrolled past the banner (let's say 80% of banner height)
-		showHeader = window.scrollY > window.innerHeight * 0.3;
-	};
-
+	
 	// Use `onMount` to ensure window access is in the browser
 	onMount(() => {
 		// Attach the scroll event listener
 		window.addEventListener('scroll', handleScroll);
-	// Use `onMount` to ensure window access is in the browser
-	onMount(() => {
-		// Attach the scroll event listener
-		window.addEventListener('scroll', handleScroll);
+	
 
-		// Clean up on component unmount
-		return () => {
-			window.removeEventListener('scroll', handleScroll);
-		};
-	});
 		// Clean up on component unmount
 		return () => {
 			window.removeEventListener('scroll', handleScroll);
@@ -81,10 +65,6 @@
 		margin: 0.5rem;
 		color: var(--primary-color); /* Bright color for the title */
 	}
-		font-size: 3rem;
-		margin: 0.5rem;
-		color: var(--primary-color); /* Bright color for the title */
-	}
 
   /* Show the header when the `show` class is applied */
   .show {
@@ -94,18 +74,7 @@
 	header:hover {
 		background: rgba(0, 0, 0, 0.8); /* Darker background on hover */
 	}
-	header:hover {
-		background: rgba(0, 0, 0, 0.8); /* Darker background on hover */
-	}
 
-	nav ul {
-		display: flex;
-		font-family: 'Poppins', sans-serif; /* Modern, sleek font */
-		list-style: none;
-		gap: 1.5rem;
-		margin: 0;
-		padding: 0;
-	}
 	nav ul {
 		display: flex;
 		font-family: 'Poppins', sans-serif; /* Modern, sleek font */
@@ -128,9 +97,6 @@
 	nav a:hover {
 		color: var(--primary-color); /* Orange highlight on hover */
 	}
-	nav a:hover {
-		color: var(--primary-color); /* Orange highlight on hover */
-	}
 
   nav a::after {
     content: '';
@@ -141,9 +107,6 @@
     transition: width 0.3s;
   }
 
-	nav a:hover::after {
-		width: 100%;
-	}
 	nav a:hover::after {
 		width: 100%;
 	}

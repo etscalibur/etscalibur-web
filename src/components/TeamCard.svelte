@@ -5,12 +5,6 @@
 	export let imageUrl;
 	export let socialLinks;
 	import Icon from '@iconify/svelte';
-	export let name;
-	export let position;
-	export let description;
-	export let imageUrl;
-	export let socialLinks;
-	import Icon from '@iconify/svelte';
 </script>
 
 <div class="card">
@@ -55,29 +49,13 @@
 		object-fit: cover;
 		margin-right: 16px;
 	}
-	.image {
-		width: 128px;
-		height: 128px;
-		border-radius: 8px;
-		object-fit: cover;
-		margin-right: 16px;
-	}
 
 	.details {
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
 	}
-	.details {
-		display: flex;
-		flex-direction: column;
-		justify-content: space-between;
-	}
 
-	.name {
-		font-size: 1.25rem;
-		font-weight: bold;
-	}
 	.name {
 		font-size: 1.25rem;
 		font-weight: bold;
@@ -88,9 +66,6 @@
     color: var(--text-primary);
   }
 
-	.description {
-		margin-top: 8px;
-	}
 	.description {
 		margin-top: 8px;
 	}
