@@ -1,5 +1,6 @@
 <script>
 	// You can include any additional script logic here if needed
+	// You can include any additional script logic here if needed
 </script>
 
 <!-- Container for the banner -->

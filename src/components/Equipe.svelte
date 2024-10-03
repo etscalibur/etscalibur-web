@@ -3,6 +3,10 @@
 	import TeamGrid from '../components/TeamGrid.svelte';
 	import { TableRonde } from '../data/TableRonde.js';
 	import { LaCours } from '../data/LaCours.js';
+	import TeamCard from '../components/TeamCard.svelte';
+	import TeamGrid from '../components/TeamGrid.svelte';
+	import { TableRonde } from '../data/TableRonde.js';
+	import { LaCours } from '../data/LaCours.js';
 </script>
 
 <div>
