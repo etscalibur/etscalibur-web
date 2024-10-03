@@ -19,7 +19,7 @@
     // Show the header when scrolled past 30% of the window height
     showHeader = window.scrollY > window.innerHeight * 0.3;
   };
-  
+
   // Use `onMount` to ensure window access is in the browser
   onMount(() => {
     window.addEventListener('scroll', handleScroll);
@@ -32,8 +32,8 @@
 </script>
 
 <!-- Header -->
-<header class="{headerClass}">
-    <h1>ETScalibur</h1>
+<header class={headerClass}>
+  <h1>ETScalibur</h1>
   <nav>
     <ul>
       {#each links as link}
@@ -56,13 +56,19 @@
     justify-content: space-between;
     align-items: center;
     backdrop-filter: blur(12px);
-    transition: background 0.3s ease, padding 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+    transition:
+      background 0.3s ease,
+      padding 0.3s ease,
+      box-shadow 0.3s ease; /* Smooth transitions */
   }
 
   .header-top {
     background: var(--primary-color);
     color: var(--text-primary);
-    transition: background 0.3s ease, padding 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+    transition:
+      background 0.3s ease,
+      padding 0.3s ease,
+      box-shadow 0.3s ease; /* Smooth transitions */
   }
 
   .header {
@@ -79,7 +85,6 @@
     margin: 0.5rem;
     color: var(--primary-color); /* Bright color for the title */
   }
-
 
   nav ul {
     display: flex;
@@ -100,11 +105,11 @@
   }
 
   nav a:hover {
-    color: var(--primary-color); 
+    color: var(--primary-color);
   }
 
   .header-top nav a:hover {
-    color: var(--text-primary); 
+    color: var(--text-primary);
   }
 
   nav a::after {
@@ -112,12 +117,12 @@
     display: block;
     width: 0;
     height: 2px;
-    background: var(--primary-color); 
+    background: var(--primary-color);
     transition: width 0.3s;
   }
 
   .header-top nav a::after {
-    background: var(--text-primary); 
+    background: var(--text-primary);
   }
 
   nav a:hover::after {

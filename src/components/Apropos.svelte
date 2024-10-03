@@ -90,12 +90,12 @@
   }
 
   .gear {
-    position : absolute;
-    transform: translate(40,-5) rotate(0deg);
+    position: absolute;
+    transform: translate(40, -5) rotate(0deg);
   }
 
   .gears {
-    position : absolute;
+    position: absolute;
     transform: translate(0, 0);
   }
 
@@ -103,7 +103,7 @@
   .cta:hover + .gear {
     opacity: 1;
     transform: translate(-60px, -4px) rotate(360deg);
-    animate : rotate 0.3s/* Make it visible and spin */
+    animate: rotate 0.3s; /* Make it visible and spin */
   }
   .cta:hover + .gear + .gears {
     opacity: 1;
