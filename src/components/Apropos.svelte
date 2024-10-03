@@ -2,7 +2,7 @@
   // Optional: Add any JS if necessary
 </script>
 
-<div class="container">
+<div class="container" id="À propos">
   <h1>Bienvenue !</h1>
   <p>
     Êtes-vous prêt à libérer la puissance de votre créativité et de vos compétences en ingénierie ?
@@ -58,6 +58,7 @@
   }
 
   .cta {
+    position: relative;
     background-color: var(--button-p);
     color: var(--button-p-text);
     padding: 0.8rem 2rem;
@@ -77,7 +78,7 @@
   /* Position and hide the SVGs initially */
   .gear,
   .gears {
-    position: absolute;
+    position: relative;
     width: 80px; /* Adjust size as needed */
     height: auto;
     transition:
@@ -87,26 +88,25 @@
   }
 
   .gear {
-    top: -40px; /* Hidden above */
-    left: -40px; /* Hidden to the left */
-    transform: rotate(0deg);
+    position : absolute;
+    transform: translate(40,-5) rotate(0deg);
   }
 
   .gears {
-    bottom: -40px; /* Hidden below */
-    right: -40px; /* Hidden to the right */
+    position : absolute;
     transform: translate(0, 0);
   }
 
   /* Show and animate SVGs on button hover */
   .cta:hover + .gear {
     opacity: 1;
-    transform: translate(40px, 40px) rotate(360deg); /* Make it visible and spin */
+    transform: translate(-60px, -4px) rotate(360deg);
+    animate : rotate 0.3s/* Make it visible and spin */
   }
 
   .cta:hover + .gear + .gears {
     opacity: 1;
-    transform: translate(-40px, -40px); /* Make it visible and move into view */
+    transform: translate(60px, -30px); /* Make it visible and move into view */
   }
 
   .robot-image {

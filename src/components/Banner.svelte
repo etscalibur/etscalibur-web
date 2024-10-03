@@ -3,7 +3,7 @@
 </script>
 
 <!-- Container for the banner -->
-<div class="container">
+<div class="container" id="Acceuil">
   <div class="mask">
     <div class="mask-text">Etscalibur</div>
   </div>

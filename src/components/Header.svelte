@@ -1,7 +1,6 @@
 <script>
-  import { onMount, onDestroy } from 'svelte';
-
-  export let title = 'Etscalibur';
+  import { onMount } from 'svelte';
+  
   export let links = ['Acceuil', 'À propos', 'Mission', 'Compétitions', 'Équipe'];
 
   // State to determine if the header should be visible
@@ -9,25 +8,24 @@
 
   // Function to handle scroll events
   const handleScroll = () => {
-    // Show the header when scrolled past the banner (let's say 80% of banner height)
+    // Show the header when scrolled past 30% of the window height
     showHeader = window.scrollY > window.innerHeight * 0.3;
   };
-
+  
   // Use `onMount` to ensure window access is in the browser
   onMount(() => {
-    // Attach the scroll event listener
     window.addEventListener('scroll', handleScroll);
-
-    // Clean up on component unmount
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
   });
+
+  $: headerClass = showHeader ? 'header' : 'header-top';
 </script>
 
 <!-- Header -->
-<header>
-  <h1 class={showHeader ? 'show' : 'display: none'}>ETScalibur</h1>
+<header class="{headerClass}">
+    <h1>ETScalibur</h1>
   <nav>
     <ul>
       {#each links as link}
@@ -39,44 +37,43 @@
 
 <style>
   header {
-    position: fixed;
+    position: sticky;
     top: 0;
     left: 0;
     right: 0;
-    width: full;
-    background: rgba(0, 0, 0, 0.7); /* Darker, semi-transparent background */
-    backdrop-filter: blur(12px);
     z-index: 1000;
     padding: 1rem;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    transition: transform 0.3s ease-in-out; /* Smooth slide-in effect */
+    backdrop-filter: blur(12px);
+    transition: background 0.3s ease, padding 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+  }
+
+  .header-top {
+    background: var(--primary-color);
+    color: var(--text-primary);
+    transition: background 0.3s ease, padding 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+  }
+
+  .header {
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent dark background */
+    color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Add a shadow when scrolling */
   }
 
   h1 {
     font-family: 'Cyberion';
     font-weight: normal;
     font-style: normal;
-
     font-size: 3rem;
     margin: 0.5rem;
     color: var(--primary-color); /* Bright color for the title */
   }
 
-  /* Show the header when the `show` class is applied */
-  .show {
-    display: block;
-  }
-
-  header:hover {
-    background: rgba(0, 0, 0, 0.8); /* Darker background on hover */
-  }
-
   nav ul {
     display: flex;
-    font-family: 'Poppins', sans-serif; /* Modern, sleek font */
+    font-family: 'Poppins', sans-serif;
     list-style: none;
     gap: 1.5rem;
     margin: 0;
@@ -84,8 +81,7 @@
   }
 
   nav a {
-    font-family: 'Poppins', sans-serif; /* Modern, sleek font */
-
+    font-family: 'Poppins', sans-serif;
     color: #fff;
     font-weight: bold;
     text-decoration: none;
@@ -94,7 +90,11 @@
   }
 
   nav a:hover {
-    color: var(--primary-color); /* Orange highlight on hover */
+    color: var(--primary-color); 
+  }
+
+  .header-top nav a:hover {
+    color: var(--text-primary); 
   }
 
   nav a::after {
@@ -102,8 +102,12 @@
     display: block;
     width: 0;
     height: 2px;
-    background: var(--primary-color); /* Animated underline effect */
+    background: var(--primary-color); 
     transition: width 0.3s;
+  }
+
+  .header-top nav a::after {
+    background: var(--text-primary); 
   }
 
   nav a:hover::after {
