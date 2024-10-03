@@ -1,11 +1,14 @@
 <script>
   export let year = new Date().getFullYear();
-  export let text = "© Etscalibur";
+  export let text = '© Etscalibur';
 </script>
+
+<footer>
+  <p>{text} - <span>{year}</span></p>
+</footer>
 
 <style>
   footer {
-
     bottom: 0;
     width: full;
     background: rgba(0, 0, 0, 1); /* Match header background */
@@ -44,7 +47,3 @@
     color: #1db954; /* Greenish highlight on hover */
   }
 </style>
-
-<footer>
-  <p>{text} - <span>{year}</span></p>
-</footer>

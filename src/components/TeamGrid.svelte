@@ -3,6 +3,18 @@
   export let members = [];
 </script>
 
+<div class="grid">
+  {#each members as member}
+    <TeamCard
+      name={member.name}
+      position={member.position}
+      description={member.description}
+      imageUrl={member.imageUrl}
+      socialLinks={member.socialLinks}
+    />
+  {/each}
+</div>
+
 <style>
   .grid {
     padding-left: 10rem;
@@ -24,15 +36,3 @@
     }
   }
 </style>
-
-<div class="grid">
-  {#each members as member}
-    <TeamCard
-      name={member.name}
-      position={member.position}
-      description={member.description}
-      imageUrl={member.imageUrl}
-      socialLinks={member.socialLinks}
-    />
-  {/each}
-</div>
