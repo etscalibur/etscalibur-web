@@ -40,6 +40,7 @@
 		color: var(--text-primary);
 		text-align: center;
 		position: relative; /* Needed for absolutely positioning the images */
+    overflow: hidden;
 	}
 
 	h1 {

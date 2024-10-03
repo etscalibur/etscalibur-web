@@ -18,6 +18,7 @@
     align-items: center;
     height: 30vh;
     background-color: var(--primary-color); /* Background color */
+	padding-top: 20vh;
   }
 
   .mask {
