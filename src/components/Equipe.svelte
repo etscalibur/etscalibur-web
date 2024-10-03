@@ -28,7 +28,6 @@
     font-family: 'Cyberion';
     font-weight: normal;
     font-style: normal;
-
     text-align: center;
   }
 </style>

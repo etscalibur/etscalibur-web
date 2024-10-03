@@ -2,7 +2,6 @@
   // You can include any additional script logic here if needed
 </script>
 
-<!-- Container for the banner -->
 <div class="container" id="Acceuil">
   <div class="mask">
     <div class="mask-text">Etscalibur</div>

@@ -24,8 +24,10 @@
 </script>
 
 <!-- Header -->
+
 <header class="{headerClass}">
     <h1>ETScalibur</h1>
+
   <nav>
     <ul>
       {#each links as link}
@@ -37,10 +39,11 @@
 
 <style>
   header {
-    position: sticky;
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
+
     z-index: 1000;
     padding: 1rem;
     display: flex;
@@ -70,6 +73,7 @@
     margin: 0.5rem;
     color: var(--primary-color); /* Bright color for the title */
   }
+
 
   nav ul {
     display: flex;
