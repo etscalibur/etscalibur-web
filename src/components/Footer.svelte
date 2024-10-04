@@ -4,9 +4,11 @@
 </script>
 
 <footer>
-  <p>
-    {text} - <span>{year}</span> - <a href="https://github.com/etscalibur/etscalibur-web">Github</a>
-  </p>
+  <p>{text} - <span>{year}</span></p>
+  <section>
+    <a href="https://github.com/etscalibur" target="_blank">GitHub</a>
+    <a href="https://www.linkedin.com/company/etscalibur" target="_blank">LinkedIn</a>
+  </section>
 </footer>
 
 <style>

@@ -1,5 +1,6 @@
 <script>
   // Optional: Add any JS if necessary
+  // Optional: Add any JS if necessary
 </script>
 
 <div class="container" id="À propos">
@@ -39,6 +40,7 @@
     color: var(--text-primary);
     text-align: center;
     position: relative; /* Needed for absolutely positioning the images */
+    overflow: hidden;
   }
 
   h1 {
@@ -88,12 +90,12 @@
   }
 
   .gear {
-    position : absolute;
-    transform: translate(40,-5) rotate(0deg);
+    position: absolute;
+    transform: translate(40, -5) rotate(0deg);
   }
 
   .gears {
-    position : absolute;
+    position: absolute;
     transform: translate(0, 0);
   }
 
@@ -101,9 +103,8 @@
   .cta:hover + .gear {
     opacity: 1;
     transform: translate(-60px, -4px) rotate(360deg);
-    animate : rotate 0.3s/* Make it visible and spin */
+    animate: rotate 0.3s; /* Make it visible and spin */
   }
-
   .cta:hover + .gear + .gears {
     opacity: 1;
     transform: translate(60px, -30px); /* Make it visible and move into view */

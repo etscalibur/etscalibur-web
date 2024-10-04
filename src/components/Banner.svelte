@@ -1,5 +1,6 @@
 <script>
   // You can include any additional script logic here if needed
+  // You can include any additional script logic here if needed
 </script>
 
 <div class="container" id="Acceuil">
@@ -16,6 +17,7 @@
     align-items: center;
     height: 30vh;
     background-color: var(--primary-color); /* Background color */
+    padding-top: 20vh;
   }
 
   .mask {
