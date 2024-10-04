@@ -7,7 +7,7 @@
     { name: 'Mission', href: '#Mission' },
     { name: 'Équipe', href: '#Équipe' },
     { name: 'Compétitions', href: '#Compétitions' },
-    { name: 'Contact', href: '/contact' },
+    { name: 'Contact', href: '/contact' }
   ];
 
   // State to determine if the header should be visible

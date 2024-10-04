@@ -1,6 +1,5 @@
 <script>
   // Optional: Add any JS if necessary
-  // Optional: Add any JS if necessary
 </script>
 
 <div class="container" id="À propos">

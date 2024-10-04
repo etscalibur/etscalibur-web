@@ -1,11 +1,10 @@
 <script>
   // You can include any additional script logic here if needed
-  // You can include any additional script logic here if needed
 </script>
 
 <div class="container" id="Acceuil">
   <div class="mask">
-    <div class="mask-text">Etscalibur</div>
+    <div class="mask-text">ETScalibur</div>
   </div>
 </div>
 
@@ -28,7 +27,6 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-
     background-size: cover; /* Ensure the image covers the container */
     background-position: center; /* Center the image */
   }

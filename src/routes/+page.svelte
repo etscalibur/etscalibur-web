@@ -5,7 +5,7 @@
   import Apropos from '../components/Apropos.svelte';
   import Mission from '../components/Mission.svelte';
   import Equipe from '../components/Equipe.svelte';
-  import Competition from '../components/Competition.svelte';
+  import Competitions from '../components/Competitions.svelte';
 </script>
 
 <Header />
@@ -13,7 +13,7 @@
 <Apropos />
 <Mission />
 <Equipe />
-<Competition />
+<Competitions />
 <Footer />
 
 <style>

@@ -1,6 +1,6 @@
 <script>
   export let year = new Date().getFullYear();
-  export let text = '© Etscalibur';
+  export let text = '© ETScalibur';
 </script>
 
 <footer>

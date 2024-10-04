@@ -1,6 +1,19 @@
-<script>
+<script lang="ts">
   import TeamCard from './TeamCard.svelte';
-  export let members = [];
+  interface SocialLinks {
+    github?: string;
+    linkedin?: string;
+  }
+
+  interface Person {
+    name: string;
+    position: string;
+    description: string;
+    imageUrl: string;
+    socialLinks?: SocialLinks;
+  }
+
+  export let members: Person[] = [];
 </script>
 
 <div class="grid">
