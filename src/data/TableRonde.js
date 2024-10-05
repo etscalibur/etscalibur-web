@@ -3,8 +3,7 @@ export const TableRonde = [
     name: 'Félix Lachance',
     position: 'Président',
     description: '',
-    imageUrl:
-      'https://media.discordapp.net/attachments/1291136342394277928/1291140631762178058/DSC_0784.jpg?ex=66ff03ea&is=66fdb26a&hm=8404efb6bbf7e1ecf4036f400abd3257e90129902793ba3d2f14c1f50a31837f&=&format=webp&width=441&height=662',
+    imageUrl: '/felix.jpg',
     socialLinks: {
       github: 'https://github.com/',
       linkedin: 'https://www.linkedin.com/in/'
@@ -14,7 +13,7 @@ export const TableRonde = [
     name: 'Zhi Sheng Trieu',
     position: 'VP tresorerie & VP communication',
     description: '',
-    imageUrl: 'https://zhisheng.me/wp-content/uploads/2023/04/Photo_Profil.jpg',
+    imageUrl: '/zhisheng.jpg',
     socialLinks: {
       github: 'https://github.com/zhishengtrieu',
       linkedin: 'https://www.linkedin.com/in/zhishengtrieu/'
