@@ -1,5 +1,5 @@
 <script>
-  import Cta from "../CTA.svelte";
+  import Cta from '../CTA.svelte';
 </script>
 
 <div class="container" id="À propos">
