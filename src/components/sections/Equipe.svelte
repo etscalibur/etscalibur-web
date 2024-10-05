@@ -1,7 +1,7 @@
 <script>
-  import TeamGrid from '../components/TeamGrid.svelte';
-  import { TableRonde } from '../data/TableRonde.js';
-  import { LaCours } from '../data/LaCours.js';
+  import TeamGrid from '../../components/TeamGrid.svelte';
+  import { TableRonde } from '../../data/TableRonde.js';
+  import { LaCours } from '../../data/LaCours.js';
 </script>
 
 <div id="Équipe">

@@ -37,7 +37,10 @@
 
     font-size: 9rem; /* Same size as defined */
     color: transparent; /* Make the text transparent for masking */
-    -webkit-background-clip: text; /* Clip the background to the text */
+    /* Clip the background to the text */
+    background-clip: text; /* Standard for modern browsers */
+    -webkit-background-clip: text; /* For WebKit-based browsers like Chrome, Safari */
+    -moz-background-clip: text; /* For older versions of Firefox */
     background-image: url('https://i.redd.it/eh5sgcfd8ii81.gif'); /* Use the same image as background */
     background-size: cover; /* Ensure it covers the text */
     background-position: center; /* Center the image */

@@ -3,10 +3,10 @@
 
   export let links = [
     { name: 'Accueil', href: '/' },
-    { name: 'À propos', href: '#À propos' },
-    { name: 'Mission', href: '#Mission' },
-    { name: 'Équipe', href: '#Équipe' },
-    { name: 'Compétitions', href: '#Compétitions' },
+    { name: 'À propos', href: '/#À propos' },
+    { name: 'Mission', href: '/#Mission' },
+    { name: 'Équipe', href: '/#Équipe' },
+    { name: 'Compétitions', href: '/#Compétitions' },
     { name: 'Contact', href: '/contact' }
   ];
 
