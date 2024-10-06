@@ -1,20 +1,22 @@
 <script>
-  import Header from '../components/Header.svelte';
-  import Footer from '../components/Footer.svelte';
-  import Banner from '../components/Banner.svelte';
-  import Apropos from '../components/Apropos.svelte';
-  import Mission from '../components/Mission.svelte';
-  import Equipe from '../components/Equipe.svelte';
-  import Competition from '../components/Competition.svelte';
+  import Header from '../components/sections/Header.svelte';
+  import Footer from '../components/sections/Footer.svelte';
+  import Banner from '../components/sections/Banner.svelte';
+  import Apropos from '../components/sections/Apropos.svelte';
+  import Mission from '../components/sections/Mission.svelte';
+  import Equipe from '../components/sections/Equipe.svelte';
+  import Competitions from '../components/sections/Competitions.svelte';
 </script>
 
-<Header />
-<Banner />
-<Apropos />
-<Mission />
-<Equipe />
-<Competition />
-<Footer />
+<div>
+  <Header />
+  <Banner />
+  <Apropos />
+  <Mission />
+  <Equipe />
+  <Competitions />
+  <Footer />
+</div>
 
 <style>
   @font-face {
@@ -35,5 +37,8 @@
     --button-p: #343434;
     --button-p-hover: #e40032;
     --button-p-text: white;
+  }
+  * {
+    font-family: 'Poppins', sans-serif;
   }
 </style>

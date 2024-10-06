@@ -2,13 +2,12 @@
   import { onMount } from 'svelte';
 
   export let links = [
-    'Acceuil',
-    'À propos',
-    'Mission',
-    'Compétitions',
-    'Équipe',
-    'Partenaires',
-    'Contact'
+    { name: 'Accueil', href: '/' },
+    { name: 'À propos', href: '/#À propos' },
+    { name: 'Mission', href: '/#Mission' },
+    { name: 'Équipe', href: '/#Équipe' },
+    { name: 'Compétitions', href: '/#Compétitions' },
+    { name: 'Contact', href: '/contact' }
   ];
 
   // State to determine if the header should be visible
@@ -37,7 +36,7 @@
   <nav>
     <ul>
       {#each links as link}
-        <li><a href={link}>{link}</a></li>
+        <li><a href={link.href}>{link.name}</a></li>
       {/each}
     </ul>
   </nav>
@@ -88,7 +87,6 @@
 
   nav ul {
     display: flex;
-    font-family: 'Poppins', sans-serif;
     list-style: none;
     gap: 1.5rem;
     margin: 0;
@@ -96,7 +94,6 @@
   }
 
   nav a {
-    font-family: 'Poppins', sans-serif;
     color: #fff;
     font-weight: bold;
     text-decoration: none;

@@ -1,13 +1,14 @@
 <script>
   export let year = new Date().getFullYear();
-  export let text = '© Etscalibur';
+  export let text = '© ETScalibur';
+  import SocialMedia from '../../components/SocialMedia.svelte';
 </script>
 
 <footer>
   <p>{text} - <span>{year}</span></p>
   <section>
-    <a href="https://github.com/etscalibur" target="_blank">GitHub</a>
-    <a href="https://www.linkedin.com/company/etscalibur" target="_blank">LinkedIn</a>
+    <p>Contactez nous</p>
+    <SocialMedia />
   </section>
 </footer>
 
@@ -32,7 +33,6 @@
     margin: 0;
     color: #fff;
     font-size: 1rem;
-    font-family: 'Poppins', sans-serif;
     letter-spacing: 1px;
   }
 
@@ -40,14 +40,7 @@
     color: #ff4500; /* Greenish highlight for dynamic year */
   }
 
-  a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.2s ease-in-out;
-  }
-
-  a:hover {
-    color: #1db954; /* Greenish highlight on hover */
+  section {
+    padding-top: 20px;
   }
 </style>
