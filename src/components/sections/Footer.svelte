@@ -33,7 +33,6 @@
     margin: 0;
     color: #fff;
     font-size: 1rem;
-    font-family: 'Poppins', sans-serif;
     letter-spacing: 1px;
   }
 

@@ -13,9 +13,6 @@
 </div>
 
 <style>
-  * {
-    font-family: 'Poppins', sans-serif;
-  }
   h1 {
     text-align: center;
     font-family: 'Cyberion';

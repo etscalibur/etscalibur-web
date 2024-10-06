@@ -8,13 +8,15 @@
   import Competitions from '../components/sections/Competitions.svelte';
 </script>
 
-<Header />
-<Banner />
-<Apropos />
-<Mission />
-<Equipe />
-<Competitions />
-<Footer />
+<div>
+  <Header />
+  <Banner />
+  <Apropos />
+  <Mission />
+  <Equipe />
+  <Competitions />
+  <Footer />
+</div>
 
 <style>
   @font-face {
@@ -35,5 +37,8 @@
     --button-p: #343434;
     --button-p-hover: #e40032;
     --button-p-text: white;
+  }
+  * {
+    font-family: 'Poppins', sans-serif;
   }
 </style>

@@ -87,7 +87,6 @@
 
   nav ul {
     display: flex;
-    font-family: 'Poppins', sans-serif;
     list-style: none;
     gap: 1.5rem;
     margin: 0;
@@ -95,7 +94,6 @@
   }
 
   nav a {
-    font-family: 'Poppins', sans-serif;
     color: #fff;
     font-weight: bold;
     text-decoration: none;

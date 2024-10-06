@@ -18,7 +18,6 @@
 <style>
   * {
     margin: 0;
-    font-family: 'Poppins', sans-serif;
   }
   .container {
     display: flex;
@@ -31,6 +30,7 @@
     justify-content: center;
     color: #fafafa;
   }
+
   h1 {
     color: #fafafa;
     font-size: 3rem;
