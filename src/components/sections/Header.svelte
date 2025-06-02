@@ -10,16 +10,13 @@
     { name: 'Contact', href: '/contact' }
   ];
 
-  // State to determine if the header should be visible
   let showHeader = false;
+  let mobileMenuOpen = false;
 
-  // Function to handle scroll events
   const handleScroll = () => {
-    // Show the header when scrolled past 30% of the window height
     showHeader = window.scrollY > window.innerHeight * 0.3;
   };
 
-  // Use `onMount` to ensure window access is in the browser
   onMount(() => {
     window.addEventListener('scroll', handleScroll);
     return () => {
@@ -33,10 +30,15 @@
 <!-- Header -->
 <header class={headerClass}>
   <h1>ETScalibur</h1>
-  <nav>
+
+  <button class="mobile-toggle" on:click={() => (mobileMenuOpen = !mobileMenuOpen)}>
+    ☰
+  </button>
+
+  <nav class:open={mobileMenuOpen}>
     <ul>
       {#each links as link}
-        <li><a href={link.href}>{link.name}</a></li>
+        <li><a href={link.href} on:click={() => (mobileMenuOpen = false)}>{link.name}</a></li>
       {/each}
     </ul>
   </nav>
@@ -48,41 +50,31 @@
     top: 0;
     left: 0;
     right: 0;
-
     z-index: 1000;
     padding: 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
     backdrop-filter: blur(12px);
-    transition:
-      background 0.3s ease,
-      padding 0.3s ease,
-      box-shadow 0.3s ease; /* Smooth transitions */
+    transition: background 0.3s ease, padding 0.3s ease, box-shadow 0.3s ease;
   }
 
   .header-top {
     background: var(--primary-color);
     color: var(--text-primary);
-    transition:
-      background 0.3s ease,
-      padding 0.3s ease,
-      box-shadow 0.3s ease; /* Smooth transitions */
   }
 
   .header {
-    background: rgba(0, 0, 0, 0.7); /* Semi-transparent dark background */
+    background: rgba(0, 0, 0, 0.7);
     color: #fff;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Add a shadow when scrolling */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   }
 
   h1 {
     font-family: 'Cyberion';
-    font-weight: normal;
-    font-style: normal;
-    font-size: 3rem;
-    margin: 0.5rem;
-    color: var(--primary-color); /* Bright color for the title */
+    font-size: 2rem;
+    margin: 0;
+    color: var(--primary-color);
   }
 
   nav ul {
@@ -98,15 +90,11 @@
     font-weight: bold;
     text-decoration: none;
     font-size: 1rem;
-    transition: color 0.2s ease-in-out;
+    position: relative;
   }
 
   nav a:hover {
     color: var(--primary-color);
-  }
-
-  .header-top nav a:hover {
-    color: var(--text-primary);
   }
 
   nav a::after {
@@ -118,11 +106,52 @@
     transition: width 0.3s;
   }
 
+  nav a:hover::after {
+    width: 100%;
+  }
+
+  .header-top nav a:hover {
+    color: var(--text-primary);
+  }
+
   .header-top nav a::after {
     background: var(--text-primary);
   }
 
-  nav a:hover::after {
-    width: 100%;
+  .mobile-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    nav {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: inherit;
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      padding: 1rem 0;
+    }
+
+    nav.open {
+      display: flex;
+    }
+
+    nav ul {
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .mobile-toggle {
+      display: block;
+    }
   }
 </style>

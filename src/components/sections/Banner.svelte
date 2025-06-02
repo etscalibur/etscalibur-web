@@ -1,5 +1,5 @@
 <script>
-  // You can include any additional script logic here if needed
+  // Placeholder for additional logic
 </script>
 
 <div class="container" id="Acceuil">
@@ -14,9 +14,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 30vh;
-    background-color: var(--primary-color); /* Background color */
-    padding-top: 20vh;
+    height: 40vh;
+    background-color: var(--primary-color);
+    padding-top: 10vh;
   }
 
   .mask {
@@ -26,23 +26,40 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background-size: cover;
+    background-position: center;
     text-align: center;
-    background-size: cover; /* Ensure the image covers the container */
-    background-position: center; /* Center the image */
   }
 
   .mask-text {
     position: absolute;
-    font-family: 'Cyberion', sans-serif; /* Use the same font as the container */
+    font-family: 'Cyberion', sans-serif;
+    font-size: clamp(3rem, 10vw, 9rem); /* Responsive font size */
+    color: transparent;
+    background-image: url('https://i.redd.it/eh5sgcfd8ii81.gif');
+    background-size: cover;
+    background-position: center;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent; /* Safari/Chrome */
+    -moz-text-fill-color: transparent; /* Firefox */
+  }
 
-    font-size: 9rem; /* Same size as defined */
-    color: transparent; /* Make the text transparent for masking */
-    /* Clip the background to the text */
-    background-clip: text; /* Standard for modern browsers */
-    -webkit-background-clip: text; /* For WebKit-based browsers like Chrome, Safari */
-    -moz-background-clip: text; /* For older versions of Firefox */
-    background-image: url('https://i.redd.it/eh5sgcfd8ii81.gif'); /* Use the same image as background */
-    background-size: cover; /* Ensure it covers the text */
-    background-position: center; /* Center the image */
+  @media (max-width: 768px) {
+    .container {
+      height: 30vh;
+      padding-top: 5vh;
+    }
+
+    .mask-text {
+      font-size: clamp(2rem, 12vw, 5rem); /* Smaller on mobile */
+    }
+  }
+
+  @media (max-width: 480px) {
+    .mask-text {
+      font-size: clamp(1.5rem, 14vw, 4rem);
+    }
   }
 </style>
