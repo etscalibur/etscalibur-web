@@ -31,9 +31,7 @@
 <header class={headerClass}>
   <h1>ETScalibur</h1>
 
-  <button class="mobile-toggle" on:click={() => (mobileMenuOpen = !mobileMenuOpen)}>
-    ☰
-  </button>
+  <button class="mobile-toggle" on:click={() => (mobileMenuOpen = !mobileMenuOpen)}> ☰ </button>
 
   <nav class:open={mobileMenuOpen}>
     <ul>
@@ -56,7 +54,10 @@
     justify-content: space-between;
     align-items: center;
     backdrop-filter: blur(12px);
-    transition: background 0.3s ease, padding 0.3s ease, box-shadow 0.3s ease;
+    transition:
+      background 0.3s ease,
+      padding 0.3s ease,
+      box-shadow 0.3s ease;
   }
 
   .header-top {
